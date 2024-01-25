@@ -34,6 +34,6 @@ typography/line-height
 ## Font-family
 
 ```css
-字体: Inter, 'Helvetica Neue', Helvetica, 'PingFang SC',
+font-family: Inter, 'Helvetica Neue', Helvetica, 'PingFang SC',
   'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
 ```

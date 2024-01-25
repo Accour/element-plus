@@ -57,6 +57,16 @@ tour/indicator
 
 :::
 
+## 目标
+
+可以传入目标的各种类型的参数。 自^(2.5.2)以来支持字符串和函数类型。
+
+:::demo
+
+tour/target
+
+:::
+
 ## Tour API
 
 :::tip
@@ -98,28 +108,28 @@ tour-step 组件上相同名称配置的优先级更高。
 
 ### TourStep 属性
 
-| 属性                       | 描述                                                                      | 类型                                                                                                                                                                                                                                         | 默认值       |
-| ------------------------ | ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------- |
-| target                   | 获取引导卡片指向的元素， 为空时居中于屏幕。                                                  | `HTMLElement`                                                                                                                                                                                                                              | -         |
-| show-arrow               | 是否显示箭头                                                                  | `boolean`                                                                                                                                                                                                                                  | `true`    |
-| title                    | 标题                                                                      | `string`                                                                                                                                                                                                                                   | *         |
-| description              | 主要描述部分                                                                  | `string`                                                                                                                                                                                                                                   | -         |
-| placement                | 引导卡片相对于目标元素的位置                                                          | ^[enum]`'top' \\| 'top-start' \\| 'top-end' \\| 'bottom' \\| 'bottom-start' \\| 'bottom-end' \\| 'left' \\| 'left-start' \\| 'left-end' \\| 'right' \\| 'right-start' \\| 'right-end'` | `bottom`  |
-| content-style            | 为content自定义样式                                                           | `CSSProperties`                                                                                                                                                                                                                            | *         |
-| mask                     | 是否启用蒙层，也可传入配置改变蒙层样式和填充色                                                 | `boolean` \| ^[Object]`{ style?: CSSProperties; color?: string; }`                                                                                                                     | `true`    |
-| type                     | 类型，影响底色与文字颜色                                                            | `default` \| `primary`                                                                                                                                                                                                                     | `default` |
-| next-button-props        | “下一步”按钮的属性                                                              | ^[Object]`{ children: VueNode \\| string; onClick: Function }`                                                                                                                         | -         |
-| prev-button-props        | “上一步”按钮的属性                                                              | ^[Object]`{ children: VueNode \\| string; onClick: Function }`                                                                                                                         | *         |
-| scroll-into-view-options | 是否支持当前元素滚动到视窗内，也可传入配置指定滚动视窗的相关参数，默认跟随 Tour 的 `scrollIntoViewOptions` 属性 | `boolean` \| `ScrollIntoViewOptions`                                                                                                                                                                                                       | -         |
-| show-close               | 是否显示关闭按钮                                                                | `boolean`                                                                                                                                                                                                                                  | `true`    |
-| close-icon               | 自定义关闭图标，默认Close                                                         | `string` \| `Component`                                                                                                                                                                                                                    | *         |
+| 属性                       | 描述                                                                                           | 类型                                                                                                                                                                                                                                         | 默认值       |
+| ------------------------ | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------- |
+| target                   | 获取引导卡片指向的元素， 为空时居中于屏幕。 自^(2.5.2)以来支持字符串和函数类型。 字符串类型是文档.querySelector的选择器。 | `HTMLElement` \| `string` \| ^[Function]`() => HTMLElement`                                                                                                                            | -         |
+| show-arrow               | 是否显示箭头                                                                                       | `boolean`                                                                                                                                                                                                                                  | `true`    |
+| title                    | 标题                                                                                           | `string`                                                                                                                                                                                                                                   | *         |
+| description              | 主要描述部分                                                                                       | `string`                                                                                                                                                                                                                                   | -         |
+| placement                | 引导卡片相对于目标元素的位置                                                                               | ^[enum]`'top' \\| 'top-start' \\| 'top-end' \\| 'bottom' \\| 'bottom-start' \\| 'bottom-end' \\| 'left' \\| 'left-start' \\| 'left-end' \\| 'right' \\| 'right-start' \\| 'right-end'` | `bottom`  |
+| content-style            | 为content自定义样式                                                                                | `CSSProperties`                                                                                                                                                                                                                            | *         |
+| mask                     | 是否启用蒙层，也可传入配置改变蒙层样式和填充色                                                                      | `boolean` \| ^[Object]`{ style?: CSSProperties; color?: string; }`                                                                                                                     | `true`    |
+| type                     | 类型，影响底色与文字颜色                                                                                 | `default` \| `primary`                                                                                                                                                                                                                     | `default` |
+| next-button-props        | “下一步”按钮的属性                                                                                   | ^[Object]`{ children: VueNode \\| string; onClick: Function }`                                                                                                                         | -         |
+| prev-button-props        | “上一步”按钮的属性                                                                                   | ^[Object]`{ children: VueNode \\| string; onClick: Function }`                                                                                                                         | *         |
+| scroll-into-view-options | 是否支持当前元素滚动到视窗内，也可传入配置指定滚动视窗的相关参数，默认跟随 Tour 的 `scrollIntoViewOptions` 属性                      | `boolean` \| `ScrollIntoViewOptions`                                                                                                                                                                                                       | -         |
+| show-close               | 是否显示关闭按钮                                                                                     | `boolean`                                                                                                                                                                                                                                  | `true`    |
+| close-icon               | 自定义关闭图标，默认Close                                                                              | `string` \| `Component`                                                                                                                                                                                                                    | *         |
 
 ### TourStep 插槽
 
 | 插槽名     | 描述     |
 | ------- | ------ |
 | default | 主要描述部分 |
-| title   | 标题部分   |
+| header  | header |
 
 ### TourStep 事件
 

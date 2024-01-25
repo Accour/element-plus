@@ -74,3 +74,9 @@ watermark/custom
 | fontStyle    | 字体样式 | ^[enum]`'none' \| 'normal' \| 'italic' \| 'oblique'`                                   | normal          |
 | textAlign    | 文本对齐 | ^[enum]`'left' \| 'right' \| 'center'\| 'start' \| 'end'`                             | center          |
 | textBaseline | 文本基线 | ^[enum]`'top' \| 'hanging' \| 'middle' \| 'alphabetic' \| 'ideographic' \| 'bottom'` | top             |
+
+### Slots
+
+| 名称 | 详情      |
+| -- | ------- |
+| 默认 | 添加水印的容器 |

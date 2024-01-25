@@ -99,7 +99,7 @@ dialog/destroy-on-close
 
 试着拖动一下`header`部分吧
 
-:::demo 设置`draggable`属性为`true`以做到拖拽
+:::demo Set `draggable` to `true` to drag. Set `overflow` ^(2.5.4) to `true` can drag overflow the viewport.
 
 dialog/draggable-dialog
 
@@ -135,6 +135,7 @@ dialog/draggable-dialog
 | show-close                 | 是否显示关闭按钮                                                 | ^[boolean]                             | true  |
 | before-close               | 关闭前的回调，会暂停 Dialog 的关闭. 回调函数内执行 done 参数方法的时候才是真正关闭对话框的时候. | ^[Function]`(done: DoneFn) => void` | —     |
 | draggable                  | 为 Dialog 启用可拖拽功能                                         | ^[boolean]                             | false |
+| overflow ^(2.5.4)          | draggable Dialog can overflow the viewport               | ^[boolean]                             | false |
 | center                     | 是否让 Dialog 的 header 和 footer 部分居中排列                      | ^[boolean]                             | false |
 | align-center ^(2.2.16)     | 是否水平垂直对齐对话框                                              | ^[boolean]                             | false |
 | destroy-on-close           | 当关闭 Dialog 时，销毁其中的元素                                     | ^[boolean]                             | false |

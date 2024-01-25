@@ -139,6 +139,26 @@ select/value-key
 
 :::
 
+## 自定义标签 ^(2.5.0)
+
+您可以自定义标签。
+
+:::demo 将自定义的标签插入 `el-select` 的 slot 中即可。 `collapse-tags`, `collapse-tags-tooltip`, `max-collapse-tags` 在此模式下不生效.
+
+select/custom-tag
+
+:::
+
+## 自定义加载 ^(2.5.2)
+
+修改加载区域内容
+
+:::demo
+
+select/custom-loading
+
+:::
+
 ## Select API
 
 ### Select Attributes
@@ -169,7 +189,7 @@ select/value-key
 | no-match-text                   | 搜索条件无匹配时显示的文字，也可以使用 `empty` 插槽设置，默认是 “No matching data'”       | ^[string]                                                                                                                                                                              | —            |
 | no-data-text                    | 无选项时显示的文字，也可以使用 `empty` 插槽设置自定义内容，默认是 “No data”                | ^[string]                                                                                                                                                                              | —            |
 | popper-class                    | 选择器下拉菜单的自定义类名                                                  | ^[string]                                                                                                                                                                              | ''           |
-| reserve-keyword                 | 当 `multiple` 和 `filter`被设置为 true 时，是否在选中一个选项后保留当前的搜索关键词        | ^[boolean]                                                                                                                                                                             | true         |
+| reserve-keyword                 | 当 `multiple` 和 `filterable`被设置为 true 时，是否在选中一个选项后保留当前的搜索关键词    | ^[boolean]                                                                                                                                                                             | true         |
 | default-first-option            | 是否在输入框按下回车时，选择第一个匹配项。 需配合 `filterable` 或 `remote` 使用           | ^[boolean]                                                                                                                                                                             | false        |
 | teleported                      | 是否将下拉列表插入至 body 元素                                             | ^[boolean]                                                                                                                                                                             | true         |
 | persistent                      | 当下拉选择器未被激活并且`persistent`设置为`false`，选择器会被删除。                    | ^[boolean]                                                                                                                                                                             | true         |
@@ -204,13 +224,15 @@ select/value-key
 
 ### Select Slots
 
-| 插槽名             | 说明            | 子标签                   |
-| --------------- | ------------- | --------------------- |
-| default         | option 组件列表   | Option Group / Option |
-| header ^(2.4.3) | 下拉列表顶部的内容     | —                     |
-| footer ^(2.4.3) | 下拉列表底部的内容     | —                     |
-| prefix          | Select 组件头部内容 | —                     |
-| empty           | 无选项时的列表       | —                     |
+| 插槽名              | 说明                     | 子标签                   |
+| ---------------- | ---------------------- | --------------------- |
+| default          | option 组件列表            | Option Group / Option |
+| header ^(2.4.3)  | 下拉列表顶部的内容              | —                     |
+| footer ^(2.4.3)  | 下拉列表底部的内容              | —                     |
+| prefix           | Select 组件头部内容          | —                     |
+| empty            | 无选项时的列表                | —                     |
+| tag ^(2.5.0)     | select 组件自定义标签内容       | —                     |
+| loading ^(2.5.2) | select 组件自定义 loading内容 | —                     |
 
 ### Select Exposes
 
@@ -238,7 +260,7 @@ select/value-key
 
 ### Option Attributes
 
-| 插槽名      | 说明                      | Type                                           | Default |
+| 名称       | 详情                      | Type                                           | Default |
 | -------- | ----------------------- | ---------------------------------------------- | ------- |
 | value    | 选项的值                    | ^[string] / ^[number] / ^[boolean] / ^[object] | —       |
 | label    | 选项的标签，若不设置则默认与`value`相同 | ^[string] / ^[number]                          | —       |

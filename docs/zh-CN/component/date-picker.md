@@ -99,7 +99,7 @@ date-picker/default-time
 
 前缀内容可以被自定义。
 
-:::demo 当你从其他 vue 组件或由渲染函数生成的组件中导入组件时, 你可以设置 `prefix-icon` 属性来定制前缀内容
+:::demo 当你从其他vue组件或由渲染函数生成的组件中导入组件时, 你可以设置 `prefix-icon` 属性来定制前缀内容
 
 date-picker/custom-prefix-icon
 
@@ -147,61 +147,61 @@ interface DateCell {
 
 ### 属性
 
-| 属性名                | 说明                                                                                       | 类型                                                                                                                      | 默认          |
-| --------------------- | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------- | ------------- |
-| model-value / v-model | 绑定值，如果它是数组，长度应该是 2                                                         | ^[number] / ^[string] / ^[object]`Date \| [Date, Date] \| [string, string]`                                               | ''            |
-| readonly              | 只读                                                                                       | ^[boolean]                                                                                                                | false         |
-| disabled              | 禁用                                                                                       | ^[boolean]                                                                                                                | false         |
-| size                  | 输入框尺寸                                                                                 | ^[enum]`'' \| 'large' \| 'default' \| 'small'`                                                                            | —             |
-| editable              | 文本框可输入                                                                               | ^[boolean]                                                                                                                | true          |
-| clearable             | 是否显示清除按钮                                                                           | ^[boolean]                                                                                                                | true          |
-| placeholder           | 非范围选择时的占位内容                                                                     | ^[string]                                                                                                                 | ''            |
-| start-placeholder     | 范围选择时开始日期的占位内容                                                               | ^[string]                                                                                                                 | —             |
-| end-placeholder       | 范围选择时结束日期的占位内容                                                               | ^[string]                                                                                                                 | —             |
-| type                  | 显示类型                                                                                   | ^[enum]`'year' \| 'month' \| 'date' \| 'dates' \| 'datetime' \| 'week' \| 'datetimerange' \| 'daterange' \| 'monthrange'` | date          |
-| format                | 显示在输入框中的格式                                                                       | 参见 [date formats](/zh-CN/component/date-picker#date-formats)                                                            | YYYY-MM-DD    |
-| popper-class          | DatePicker 下拉框的类名                                                                    | ^[string]                                                                                                                 | —             |
-| popper-options        | 自定义 popper 选项，更多请参考 [popper.js](https://popper.js.org/docs/v2/)                 | ^[object]`Partial<PopperOptions>`                                                                                         | {}            |
-| range-separator       | 选择范围时的分隔符                                                                         | ^[string]                                                                                                                 | '-'           |
-| default-value         | 可选，选择器打开时默认显示的时间                                                           | ^[object]`Date \| [Date, Date]`                                                                                           | —             |
-| default-time          | 范围选择时选中日期所使用的当日内具体时刻                                                   | ^[object]`Date \| [Date, Date]`                                                                                           | —             |
-| value-format          | 可选，绑定值的格式。 不指定则绑定值为 Date 对象                                            | 参见 [date formats](/zh-CN/component/date-picker#date-formats)                                                            | —             |
-| id                    | 等价于原生 input `id` 属性                                                                 | ^[string] / ^[object]`[string, string]`                                                                                   | —             |
-| name                  | 等价于原生 input `name` 属性                                                               | ^[string] / ^[object]`[string, string]`                                                                                   | ''            |
-| unlink-panels         | 在范围选择器里取消两个日期面板之间的联动                                                   | ^[boolean]                                                                                                                | false         |
-| prefix-icon           | 自定义前缀图标 如果 `type`的值是`TimeLikeType`，那么就是 `Clock`，不然就是 `Calendar`      | ^[string] / ^[object]`Component`                                                                                          | ''            |
-| clear-icon            | 自定义清除图标                                                                             | ^[string] / ^[object]`Component`                                                                                          | `CircleClose` |
-| validate-event        | 是否触发表单验证                                                                           | ^[boolean]                                                                                                                | true          |
-| disabled-date         | 一个用来判断该日期是否被禁用的函数，接受一个 Date 对象作为参数。 应该返回一个 Boolean 值。 | ^[Function]`(data: Date) => boolean`                                                                                      | —             |
-| shortcuts             | 设置快捷选项，需要传入数组对象                                                             | ^[object]`Array<{ text: string, value: Date \| Function }>`                                                               | []            |
-| cell-class-name       | 设置自定义类名                                                                             | ^[Function]`(data: Date) => string`                                                                                       | —             |
-| teleported            | 是否将 date-picker 的下拉列表插入至 body 元素                                              | ^[boolean]                                                                                                                | true          |
+| 属性名                   | 说明                                                              | 类型                                                                                                                                | 默认            |
+| --------------------- | --------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | ------------- |
+| model-value / v-model | 绑定值，如果它是数组，长度应该是 2                                              | ^[number] / ^[string] / ^[object]`Date \| [Date, Date] \| [string, string]`                                                     | ''            |
+| readonly              | 只读                                                              | ^[boolean]                                                                                                                        | false         |
+| disabled              | 禁用                                                              | ^[boolean]                                                                                                                        | false         |
+| size                  | 输入框尺寸                                                           | ^[enum]`'' \| 'large' \| 'default' \| 'small'`                                                                                 | —             |
+| editable              | 文本框可输入                                                          | ^[boolean]                                                                                                                        | true          |
+| clearable             | 是否显示清除按钮                                                        | ^[boolean]                                                                                                                        | true          |
+| placeholder           | 非范围选择时的占位内容                                                     | ^[string]                                                                                                                         | ''            |
+| start-placeholder     | 范围选择时开始日期的占位内容                                                  | ^[string]                                                                                                                         | —             |
+| end-placeholder       | 范围选择时结束日期的占位内容                                                  | ^[string]                                                                                                                         | —             |
+| type                  | 显示类型                                                            | ^[enum]`'year' \| 'month' \| 'date' \| 'dates' \| 'datetime' \| 'week' \| 'datetimerange' \| 'daterange' \| 'monthrange'` | date          |
+| format                | 显示在输入框中的格式                                                      | 参见 [date formats](/en-US/component/date-picker#date-formats)                                                                      | YYYY-MM-DD    |
+| popper-class          | DatePicker 下拉框的类名                                               | ^[string]                                                                                                                         | —             |
+| popper-options        | 自定义 popper 选项，更多请参考 [popper.js](https://popper.js.org/docs/v2/) | ^[object]`Partial<PopperOptions>`                                                                                           | {}            |
+| range-separator       | 选择范围时的分隔符                                                       | ^[string]                                                                                                                         | '-'           |
+| default-value         | 可选，选择器打开时默认显示的时间                                                | ^[object]`Date \| [Date, Date]`                                                                                                  | —             |
+| default-time          | 范围选择时选中日期所使用的当日内具体时刻                                            | ^[object]`Date \| [Date, Date]`                                                                                                  | —             |
+| value-format          | 可选，绑定值的格式。 不指定则绑定值为 Date 对象                                     | 参见 [date formats](/en-US/component/date-picker#date-formats)                                                                      | —             |
+| id                    | 等价于原生 input `id` 属性                                             | ^[string] / ^[object]`[string, string]`                                                                                           | —             |
+| name                  | 等价于原生 input `name` 属性                                           | ^[string] / ^[object]`[string, string]`                                                                                           | ''            |
+| unlink-panels         | 在范围选择器里取消两个日期面板之间的联动                                            | ^[boolean]                                                                                                                        | false         |
+| prefix-icon           | 自定义前缀图标 如果 `type`的值是`TimeLikeType`，那么就是 `Clock`，不然就是 `Calendar` | ^[string] / ^[object]`Component`                                                                                                  | ''            |
+| clear-icon            | 自定义清除图标                                                         | ^[string] / ^[object]`Component`                                                                                                  | `CircleClose` |
+| validate-event        | 是否触发表单验证                                                        | ^[boolean]                                                                                                                        | true          |
+| disabled-date         | 一个用来判断该日期是否被禁用的函数，接受一个 Date 对象作为参数。 应该返回一个 Boolean 值。           | ^[Function]`(data: Date) => boolean`                                                                                           | —             |
+| shortcuts             | 设置快捷选项，需要传入数组对象                                                 | ^[object]`Array<{ text: string, value: Date \| Function }>`                                                                | []            |
+| cell-class-name       | 设置自定义类名                                                         | ^[Function]`(data: Date) => string`                                                                                            | —             |
+| teleported            | 是否将 date-picker 的下拉列表插入至 body 元素                                | ^[boolean]                                                                                                                        | true          |
 
 ### 事件
 
-| 事件名          | 说明                                    | 类型                                                                                      |
-| --------------- | --------------------------------------- | ----------------------------------------------------------------------------------------- |
-| change          | 用户确认选定的值时触发                  | ^[Function]`(val: typeof v-model) => void`                                                |
-| blur            | 在组件 Input 失去焦点时触发             | ^[Function]`(e: FocusEvent) => void`                                                      |
-| focus           | 在组件 Input 获得焦点时触发             | ^[Function]`(e: FocusEvent) => void`                                                      |
-| calendar-change | 在日历所选日期更改时触发                | ^[Function]`(val: [Date, null \| Date]) => void`                                          |
-| panel-change    | 当日期面板改变时触发。                  | ^[Function]`(date: Date \| [Date, Date], mode: 'month' \| 'year', view?: string) => void` |
-| visible-change  | 当 DatePicker 的下拉列表出现/消失时触发 | ^[Function]`(visibility: boolean) => void`                                                |
+| 事件名             | 说明                         | 类型                                                                                             |
+| --------------- | -------------------------- | ---------------------------------------------------------------------------------------------- |
+| change          | 用户确认选定的值时触发                | ^[Function]`(val: typeof v-model) => void`                                                  |
+| blur            | 在组件 Input 失去焦点时触发          | ^[Function]`(e: FocusEvent) => void`                                                        |
+| focus           | 在组件 Input 获得焦点时触发          | ^[Function]`(e: FocusEvent) => void`                                                        |
+| calendar-change | 在日历所选日期更改时触发               | ^[Function]`(val: [Date, null \| Date]) => void`                                           |
+| panel-change    | 当日期面板改变时触发。                | ^[Function]`(date: Date \| [Date, Date], mode: 'month' \| 'year', view?: string) => void` |
+| visible-change  | 当 DatePicker 的下拉列表出现/消失时触发 | ^[Function]`(visibility: boolean) => void`                                                  |
 
 ### 插槽
 
-| 名称            | 说明                 |
-| --------------- | -------------------- |
-| default         | 自定义单元格内容     |
+| 名称              | 说明         |
+| --------------- | ---------- |
+| default         | 自定义单元格内容   |
 | range-separator | 自定义范围分割符内容 |
 
 ### 暴露
 
-| 插槽名                | 说明                     | 类型                                                                           |
-| --------------------- | ------------------------ | ------------------------------------------------------------------------------ |
+| 插槽名                   | 说明           | 类型                                                                                |
+| --------------------- | ------------ | --------------------------------------------------------------------------------- |
 | focus                 | 使选择器的输入框获取焦点 | ^[Function]`(focusStartInput?: boolean, isIgnoreFocusEvent?: boolean) => void` |
-| handleOpen ^(2.2.16)  | 打开日期选择器弹窗       | ^[Function]`() => void`                                                        |
-| handleClose ^(2.2.16) | 关闭日期选择器弹窗       | ^[Function]`() => void`                                                        |
+| handleOpen ^(2.2.16)  | 打开日期选择器弹窗    | ^[Function]`() => void`                                                        |
+| handleClose ^(2.2.16) | 关闭日期选择器弹窗    | ^[Function]`() => void`                                                        |
 
 ## 类型声明
 

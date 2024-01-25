@@ -69,6 +69,7 @@ image/image-preview
 | scroll-container      | 开启懒加载功能后，监听 scroll 事件的容器 默认情况下，开启懒加载功能后，监听 scroll 事件的容器                                                  | ^[string] / ^[object]`HTMLElement`                                           | —     |
 | alt                   | 原生属性 `alt`                                                                                               | ^[string]                                                                    | —     |
 | referrerpolicy        | 原生属性 [referrerPolicy](https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/referrerPolicy)。 | ^[string]                                                                    | —     |
+| crossorigin           | 原生属性 [crossorigin](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/crossorigin)             | ^[enum]`'' \| 'anonymous' \| 'use-credentials'`                            | —     |
 | preview-src-list      | 开启图片预览功能                                                                                                 | ^[object]`string[]`                                                          | []    |
 | z-index               | 设置图片预览的 z-index                                                                                          | ^[number]                                                                    | —     |
 | initial-index         | 初始预览图像索引，小于 `url-list` 的长度                                                                               | ^[number]                                                                    | 0     |

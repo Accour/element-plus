@@ -5,17 +5,18 @@ lang: zh-CN
 
 # 安装
 
-## Compatibility ^(2.5.0)
+## 兼容性^(2.5.0)
 
-Element Plus can run on browsers that support last 2 versions.
+Element Plus 支持最近两个版本的浏览器。
 
-If you really need to support outdated browsers, please add [Babel](https://babeljs.io/) and Polyfill yourself.
+如果您需要支持旧版本的浏览器，请自行添加 [Babel](https://babeljs.io/) 和相应的 Polyfill 。
 
-Since Vue 3 no longer supports IE11, Element Plus does not support IE either.
+由于 Vue 3 不再支持 IE11，Element Plus 也不再支持 IE 浏览器。
 
-| ![IE](https://cdn.jsdelivr.net/npm/@browser-logos/edge/edge_32x32.png) <br> Edge | ![Firefox](https://cdn.jsdelivr.net/npm/@browser-logos/firefox/firefox_32x32.png) <br> Firefox | ![Chrome](https://cdn.jsdelivr.net/npm/@browser-logos/chrome/chrome_32x32.png) <br> Chrome | ![Safari](https://cdn.jsdelivr.net/npm/@browser-logos/safari/safari_32x32.png) <br> Safari |
-| -------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| last 2 versions                                                                  | last 2 versions                                                                                | last 2 versions                                                                            | last 2 versions                                                                            |
+| 版本      | ![Chrome](https://cdn.jsdelivr.net/npm/@browser-logos/chrome/chrome_32x32.png) <br> Chrome | ![IE](https://cdn.jsdelivr.net/npm/@browser-logos/edge/edge_32x32.png) <br> Edge | ![Firefox](https://cdn.jsdelivr.net/npm/@browser-logos/firefox/firefox_32x32.png) <br> Firefox | ![Safari](https://cdn.jsdelivr.net/npm/@browser-logos/safari/safari_32x32.png) <br> Safari |
+| ------- | ------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| < 2.5.0 | Chrome ≥ 64                                                                                      | Edge ≥ 79                                                                              | Firefox ≥ 78                                                                                         | Safari ≥ 12                                                                                      |
+| 2.5.0 + | Chrome ≥ 85                                                                                      | Edge ≥ 85                                                                              | Firefox ≥ 79                                                                                         | Safari ≥ 14.1                                                                                    |
 
 ### 版本
 
@@ -92,4 +93,4 @@ $ pnpm install element-plus
   (<a href='https://codepen.io/iamkun'>@iamkun</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-如果是通过包管理器安装，并希望配合打包工具使用，请阅读下一节：[快速上手](/zh-CN/guide/quickstart)。
+如果是通过包管理器安装，并希望配合打包工具使用，请阅读下一节：[快速上手](/en-US/guide/quickstart)。
